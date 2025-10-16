@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ATR Cup: Saturday Clash</title>
+  <title>ATR Cup: Two Vlads One Cup</title>
   <style>
     body {
       font-family: 'Trebuchet MS', sans-serif;
@@ -18,75 +18,160 @@
       color: #ffd700;
       text-shadow: 0 0 10px #ffae00;
     }
-    .bracket {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 40px;
+    .info {
+      text-align: center;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    .section {
+      width: 100%;
+      max-width: 1000px;
       margin-top: 30px;
+    }
+    .section-title {
+      color: #ffae00;
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-align: center;
+      margin-bottom: 10px;
+      text-shadow: 0 0 6px #ffae00;
+    }
+    .matches {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
     }
     .match {
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 10px;
-      padding: 10px 15px;
-      min-width: 200px;
+      padding: 10px 20px 15px;
+      width: 220px;
       box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+      transition: transform 0.2s;
+      position: relative;
     }
-    .title {
-      color: #ffae00;
+    .match:hover {
+      transform: scale(1.03);
+    }
+    .match-label {
+      position: absolute;
+      top: -12px;
+      left: 10px;
+      background-color: #ffae00;
+      color: #0c0c0f;
       font-weight: bold;
-      margin-bottom: 5px;
-      text-align: center;
+      font-size: 0.8rem;
+      border-radius: 4px;
+      padding: 2px 6px;
+      box-shadow: 0 0 6px #ffae00;
     }
     .player {
-      padding: 5px;
-      margin: 2px 0;
       background-color: rgba(255, 255, 255, 0.05);
-      border-radius: 5px;
+      border-radius: 6px;
+      padding: 6px;
+      margin: 4px 0;
       text-align: center;
+      transition: background-color 0.2s;
+    }
+    .player:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+      cursor: pointer;
+    }
+    .vs {
+      text-align: center;
+      color: #888;
+      font-size: 0.9rem;
+      margin: 3px 0;
     }
     .footer {
-      margin-top: 40px;
+      margin-top: 50px;
       text-align: center;
       color: #aaa;
       font-size: 0.9rem;
+      max-width: 600px;
+      line-height: 1.4;
     }
   </style>
 </head>
 <body>
   <h1>⚔️ WC3 ATR CUP: TWO VLADS ONE CUP ⚔️</h1>
-  <p><strong>Game:</strong> Warcraft 3 Reforged • <strong>Mode:</strong> ATR </p>
-  <p><strong>Start:</strong> Saturday • October 18 • 18:00 (Astana Time) • <strong>Format:</strong>  1v1 • Double Elimination • Bo3</p>
-  <p><strong>Map Pool:</strong> FA • TV • NW • FP • RR • MS • HB</p>
+  
+  <div class="info">
+    <p><strong>Game:</strong> Warcraft 3 Reforged • <strong>Mode:</strong> ATR</p>
+    <p><strong>Start:</strong> Saturday • October 18 • 18:00 (Astana Time)</p>
+    <p><strong>Format:</strong> 1v1 • Double Elimination • Best of 3</p>
+    <p><strong>Map Pool:</strong> FA • TV • NW • FP • RR • MS • HB</p>
+  </div>
 
-  <div class="bracket">
-    <div class="match">
-      <div class="title">Upper Bracket</div>
-      <div class="player">Apamah 🆚 Kochan</div>
-      <div class="player">Vigdail 🆚 Amaterasu</div>
+  <!-- Upper Bracket -->
+  <div class="section">
+    <div class="section-title">Upper Bracket</div>
+    <div class="matches">
+      <div class="match">
+        <div class="match-label">A</div>
+        <div class="player">Apamah</div>
+        <div class="vs">🆚</div>
+        <div class="player">Kochan</div>
+      </div>
+      <div class="match">
+        <div class="match-label">B</div>
+        <div class="player">Vigdail</div>
+        <div class="vs">🆚</div>
+        <div class="player">Amaterasu</div>
+      </div>
     </div>
+  </div>
 
-    <div class="match">
-      <div class="title">Upper Final</div>
-      <div class="player"></div>
-      <div class="player"></div>
+  <!-- Upper Final -->
+  <div class="section">
+    <div class="section-title">Upper Final</div>
+    <div class="matches">
+      <div class="match">
+        <div class="match-label">S</div>
+        <div class="player">A-Winner</div>
+        <div class="vs">🆚</div>
+        <div class="player">B-Winner</div>
+      </div>
     </div>
+  </div>
 
-    <div class="match">
-      <div class="title">Lower Bracket</div>
-      <div class="player"></div>
-      <div class="player"></div>
+  <!-- Lower Bracket -->
+  <div class="section">
+    <div class="section-title">Lower Bracket</div>
+    <div class="matches">
+      <div class="match">
+        <div class="match-label">C</div>
+        <div class="player">A-Loser</div>
+        <div class="vs">🆚</div>
+        <div class="player">B-Loser</div>
+      </div>
+      <div class="match">
+        <div class="match-label">D</div>
+        <div class="player">C-Winner</div>
+        <div class="vs">🆚</div>
+        <div class="player">S-Loser</div>
+      </div>
     </div>
+  </div>
 
-    <div class="match">
-      <div class="title">Grand Final</div>
-      <div class="player"></div>
-      <div class="player"></div>
+  <!-- Grand Final -->
+  <div class="section">
+    <div class="section-title">Grand Final</div>
+    <div class="matches">
+      <div class="match">
+        <div class="match-label">F</div>
+        <div class="player">S-Winner</div>
+        <div class="vs">🆚</div>
+        <div class="player">D-Winner</div>
+      </div>
     </div>
   </div>
 
   <div class="footer">
-    Become the second Vlad in history, and share his cup with him! Good lick to all and Good suck to Vlad!  
+    Become the second Vlad in history, and share his cup with him!<br>
+    Good lick to all, and good suck to Vlad!
   </div>
 </body>
 </html>
