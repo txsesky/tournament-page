@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATR Cup: Saturday Clash</title>
+  <style>
+    body {
+      font-family: 'Trebuchet MS', sans-serif;
+      background-color: #0c0c0f;
+      color: #e5e5e5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #ffd700;
+      text-shadow: 0 0 10px #ffae00;
+    }
+    .bracket {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      margin-top: 30px;
+    }
+    .match {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      padding: 10px 15px;
+      min-width: 200px;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+    }
+    .title {
+      color: #ffae00;
+      font-weight: bold;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+    .player {
+      padding: 5px;
+      margin: 2px 0;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 5px;
+      text-align: center;
+    }
+    .footer {
+      margin-top: 40px;
+      text-align: center;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>⚔️ ATR CUP: Saturday Clash ⚔️</h1>
+  <p><strong>Начало:</strong> 18:00 (по Астане) • <strong>Формат:</strong> Double Elimination Bo3</p>
+  <p><strong>Карты:</strong> FA • TV • NW • FP • RR • MS • HB</p>
+
+  <div class="bracket">
+    <div class="match">
+      <div class="title">Upper Bracket</div>
+      <div class="player">Apamah 🆚 Kochan</div>
+      <div class="player">Vigdail 🆚 Amaterasu</div>
+    </div>
+
+    <div class="match">
+      <div class="title">Upper Final</div>
+      <div class="player">Победитель A 🆚 Победитель B</div>
+    </div>
+
+    <div class="match">
+      <div class="title">Lower Bracket</div>
+      <div class="player">Проигравший A 🆚 Проигравший B</div>
+      <div class="player">Победитель ⬆ 🆚 Проигравший Upper Final</div>
+    </div>
+
+    <div class="match">
+      <div class="title">Grand Final</div>
+      <div class="player">Победитель Upper 🆚 Победитель Lower</div>
+      <div class="player">Bo3 • возможен Reset</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    🎮 ATR Random Races | Реплеи сохранять 💾 | Пусть победит тот, у кого микроконтроль как у Blademaster’а 💨
+  </div>
+</body>
+</html>
